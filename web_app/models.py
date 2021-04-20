@@ -31,7 +31,7 @@ class Stock(models.Model):
     title=models.CharField(max_length=50)
     
     # def getprice(symbol):
-    #     r = requests.get('https://finnhub.io/api/v1/quote?symbol={}&token=c1nom4i37fkph7jrlvdg'.format(str(symbol)))
+    #     r = requests.get('https://finnhub.io/api/v1/quote?symbol={}&token=##############'.format(str(symbol)))
 
     #     quote = r.json()["c"]
 

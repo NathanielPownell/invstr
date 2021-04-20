@@ -21,11 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n3=mfea)i7khxi#md(ty@p81c9!6-8u904if4!20a^5=8(vctr'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = [
     'invstrapp.herokuapp.com',
@@ -84,21 +79,6 @@ WSGI_APPLICATION = 'profectus.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'HOST' : 'ec2-54-211-176-156.compute-1.amazonaws.com',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'defnmkkhv79mfe',
-        'USER' : 'wcldsmmkxaujaz',
-        'PORT' : '5432',
-        'PASSWORD' : 'dd28e9ea754be6fdf3f18fb1775d3135696d7c6142ff9a9615a8a08e9c5ab3b1',
-        'URI' : 'postgres://wcldsmmkxaujaz:dd28e9ea754be6fdf3f18fb1775d3135696d7c6142ff9a9615a8a08e9c5ab3b1@ec2-54-211-176-156.compute-1.amazonaws.com:5432/defnmkkhv79mfe',
-    }
-}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
