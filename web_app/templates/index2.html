@@ -1,0 +1,155 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}" />
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   
+
+    <title>OOO</title>
+  </head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="https://lh3.googleusercontent.com/psVdupKV5V7EcF3i91J4FHnQTZytwydC1H8HVNUrre-PAPMlGHq2GDmGOEcM0I19UVH1nphJJYFeH_mGw35v_QoeRJG0IcmWIURLCOyGqzH6FBgmb6zcjwoW_2sG_kqRRf8IkPfsuQ=w2400" width="190"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'aboutapp' %}">About invstr. </a>
+                    
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'aboutme' %}">About the Developer</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Support</a>
+                </li>
+              </ul>
+              {% if user.is_authenticated %}
+                    <a class="btn btn-secondary my-2 my-sm-0" href="{% url 'profile' %}">Profile</a>
+                    <a class="btn btn-outline-secondary my-2 my-sm-0" href="{% url 'logout' %}">Log Out</a>
+                {% else %}
+                    <a class="btn btn-success my-2 my-sm-0" href="{% url 'register' %}">Register</a>
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'login' %}">Log In</a>
+                {% endif %}
+              
+            </div>
+          </nav>
+      </header>
+
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" ></li>
+            <li data-target="#myCarousel" data-slide-to="2" ></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" >
+                <div class="overlay-image"><img class="d-block w-100" src="https://lh3.googleusercontent.com/rGeYR2ay8hFZxbsUuCwJnWLFKJ7NHPbZc--QwBYk36HNfdhpvF9Oy2tLkZoLJuO1GBcx1mx7WgLH2bMVq0ip8Ejk1yQ7jnRDvpXE3OJiQGVjmkc9GUklIKKYOalNO0Evkv7tZ-HsOQ=w2400"></div>
+                <div class="container">
+                        <h1>REAL-TIME DATA</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo nesciunt temporibus animi ipsum id dignissimos asperiores aspernatur ullam. Hic officiis voluptatem veniam ipsam aspernatur cupiditate, soluta ipsum nobis tempora?</p>
+                        <a href="#" class="btn btn-lg btn-success">Sign Up Today</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay-image"><img class="d-block w-100" src="https://lh3.googleusercontent.com/D_qHNALRDTSHw-ZPAiv-kGFESlOAcGHJCB3Mh8EQS8_nUHLJjXo-U0sxf25aiDjLqGe0EhVDuq_5fr7g8qsFztR7iKeQv8KzhYBUxotAyq4A9JGqCLCNkndjaA3r2z7_Xoonewi4qw=w2400"></div>
+
+                <div class="container">
+                        <h1>LEARN TO INVEST RISK-FREE</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo nesciunt temporibus animi ipsum id dignissimos asperiores aspernatur ullam. Hic officiis voluptatem veniam ipsam aspernatur cupiditate, soluta ipsum nobis tempora?</p>
+                        <a href="#" class="btn btn-lg btn-success">Sign Up Today</a>
+                </div>
+            </div>  
+            <div class="carousel-item">
+                <div class="overlay-image"><img class="d-block w-100" src="https://lh3.googleusercontent.com/sA1HpaekG8LmS7apKz7Krr4k9p7hfCzipSs_pF0lYIcNQabPm2JgRWqN8qoAEwhDRfjqnCLgfr6TZgU3HR63InExnSvK0U0991ovHBsn9BIB8663WK2yrxy_tNtLSTKI9w2DvHY8AQ=w2400"></div>
+
+                <div class="container">
+                        <h1>FREE SIMULATED STOCK TRADING</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo nesciunt temporibus animi ipsum id dignissimos asperiores aspernatur ullam. Hic officiis voluptatem veniam ipsam aspernatur cupiditate, soluta ipsum nobis tempora?</p>
+                        <a href="#" class="btn btn-lg btn-success">Sign Up Today</a>
+                </div>
+            </div>  
+        </div> 
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+            
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+            
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="lower">
+        <div class="info">
+            <h1><svg viewBox="0 0 512 512" width="100" title="chart-line" fill="white">
+                <path d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z" />
+              </svg></h1>
+              <h2>Real-Time Data</h2>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quibusdam non beatae cumque. Quam fuga, saepe, pariatur amet eligendi maiores repellendus placeat error praesentium, dolore perspiciatis sequi ullam atque est.</p>
+        </div>
+        <div class="info">
+            <h1><svg viewBox="0 0 512 512" width="100" title="info-circle" fill="white">
+                <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+              </svg></h1>
+              <h2>Risk-Free Learning</h2>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quibusdam non beatae cumque. Quam fuga, saepe, pariatur amet eligendi maiores repellendus placeat error praesentium, dolore perspiciatis sequi ullam atque est.</p>
+        </div>
+        <div class="info">
+            <h1><svg viewBox="0 0 640 512" width="100" title="money-check-alt" fill="white">
+                <path d="M608 32H32C14.33 32 0 46.33 0 64v384c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zM176 327.88V344c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V152c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.05 44.44-42.67 45.07zM416 312c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16zm160 0c0 4.42-3.58 8-8 8h-80c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16zm0-96c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h272c4.42 0 8 3.58 8 8v16z" />
+              </svg></h1>
+              <h2>Simulated Stock Trading</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quibusdam non beatae cumque. Quam fuga, saepe, pariatur amet eligendi maiores repellendus placeat error praesentium, dolore perspiciatis sequi ullam atque est.</p>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

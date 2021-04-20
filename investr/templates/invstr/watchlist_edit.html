@@ -1,0 +1,48 @@
+
+{% extends 'invstr/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Watchlist - Add
+{% endblock %}
+
+{% block content %}
+<style>
+    .content {
+        padding: 10% 20%;
+        color: white;
+    }
+    .edit-btn {
+        cursor: pointer;
+        margin: 5% 5%;
+        padding: 6px 8px;
+        font-size: 1em;
+        border: none;
+        border-radius: 4px;
+    }
+</style>
+    <div class="content">
+        <h1>Add To Watchlist</h1>
+
+        {% for unit in object_list %}
+
+            {% for symb in unit.symbols %}
+                <p><a href="{% url 'trade' %}{{symb}}">{{ symb }}</a></p>
+
+            {% endfor %}
+
+        {% endfor %}
+        
+        <form method="POST" id="wlist_form">
+            {% csrf_token %}
+            <label for="symbol">Ticker Symbol: </label>
+            <input type="text" id="symbol" name="symbol">
+            {{ wlist_form|crispy }}
+            
+            <button type="submit" class="edit-btn">Add</button></a>
+        </form>
+        <a href="{% url 'watchlist' %}"><button class="edit-btn">Back to Watchlist</button></a>
+
+
+    </div>
+{% endblock %}

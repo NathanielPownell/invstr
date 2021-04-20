@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="../../static/web_app/css/main.css" >
+
+{% extends "web_app/base.html" %}
+
+{% block title %}
+    About Me
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<style>
+    .content {
+        padding: 5%;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 65% 35%;
+    }
+    .picme {
+        grid-column: 2;
+        width: 80%;
+        border-radius: 50%;
+        float: center;
+    }
+    aside {
+        align-items: center;
+        grid-column: 2;
+        text-align: center;
+    }
+    p {
+        grid-column: 1;
+    }
+    h5 {
+        grid-column: 1;
+    }
+</style>
+<div class="content">
+<article>
+    <h2>About Me</h2>
+    <p>Hi! I'm Nathaniel Pownell.</p>
+    <p><a href="https://www.nathanielpownell.com/">NathanielPownell.com</a></p>
+    <p> I'm a student at Ivy Tech community college. I have almost finished my AAS in Software Development. Although my degree is Software Development, my focus is on full-stack web development.
+    </br>
+</br>
+        Some of my favorite technologies include Python, Django, CSS and JavaScript. This Invstr platform utilizes a variety of different technologies.</p>
+    <aside><img class="picme" src="https://lh3.googleusercontent.com/dr91RIprR7Zskk9JegrHDlrz8Wmvl7vdAy-5HwGPpiESbcpZeD0HowA-jbgUqzlUtiToOEk-OSVzfffcGPQVaqTbtOmZpTl9bfXnxPYPmt4uGpvUz1tXOGczK0HA2Z3W0kLp14r7GA=w2400"></aside>
+    <aside>Me after this semester.</aside>
+
+</article>
+</div>
+{% endblock %}

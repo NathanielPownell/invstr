@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="../../static/web_app/css/main.css" >
+
+{% extends "web_app/base.html" %}
+{% load static %}
+
+
+{% block title %}
+    About
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .content {
+        padding: 5%;
+    }
+</style>
+
+
+
+<div class="content">
+    <h2>About invstr.</h2>
+</br>
+    <article>
+        <section>
+        </br>
+            <p>After becoming interested in stock investing and trading in early 2019,
+                I have been using various platforms to invest in stocks.
+                many of these platforms lack interface simplicity. When
+                someone has just begun learning about stocks I believe a simple,
+                bare-bones design works best.
+            </p>
+        </section>
+        <section>
+            
+            <p>
+                Invstr. uses the idea of "Paper Trading" which is using a fake
+                account balance and "pretend" money to invest and trade in stocks.
+                Some platforms online offer this functionality but I believe it was an
+                afterthought rather than the focus of these platforms.
+            </p>
+        </section>
+        <section>
+            
+            <p>
+                My mission is to provide a simple interface where people can learn
+                about stocks completely free, without risking any of their hard-earned money.
+                I believe if I had access to a tool like this when I had just began my investing 
+                journey, it could have saved me lots of money.
+            </p>
+        </section>
+    </br>
+
+        <a href="{% url 'register' %}" class="btn btn-lg btn-success">Sign Up Today</a>
+    </article>
+
+
+</div>  
+{% endblock %}
+

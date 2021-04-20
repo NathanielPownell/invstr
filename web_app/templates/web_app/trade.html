@@ -1,0 +1,58 @@
+{%extends "web_app/base.html" %}
+{% block content %}
+<h1></h1>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_e3e74"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 1000,
+    "height": 610,
+    "symbol": "NASDAQ:AAPL",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": false,
+    "container_id": "tradingview_e3e74"
+  }
+    );
+    </script>
+  </div>
+    <div class="col-md-4">
+    <div class="btn-success btn-lg">BUY</div>
+    <div class="btn-danger btn-lg">SELL</div>
+  </div>
+  <!-- TradingView Widget END -->
+
+  <!-- Watchlist -->
+  <h1>Watchlist</h1>
+  <table class="table table-sm table-dark table-hover">
+    <thead>
+      <tr>
+          
+        
+        <th scope="col">Symbol</th>
+        <th scope="col">Current</th>
+        <th scope="col">Change</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for object.item in object %}
+            <tr>
+                
+                <th scope="row"></th>
+                <td>{{ object.item }}</td>
+                <td>{{ object.item.price }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+    
+{% endblock content %}

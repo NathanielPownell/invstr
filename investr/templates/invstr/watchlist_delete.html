@@ -1,0 +1,38 @@
+{% extends 'invstr/base.html' %}
+
+{% block title %}
+Delete Watchlist
+{% endblock %}
+  
+  {% block content %}
+
+  <style>
+    .del {
+      padding: 5px 7px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: rgb(134, 0, 0);
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+    h3 {
+      padding-bottom: 40px;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+  </style>
+
+    <div class="container">
+      <form method="post">{% csrf_token %}
+          <h3>Are you sure you want to delete your watchlist?</h3>
+          <p class="muted">This is permanent and cannot be undone.</p>
+          <input class="del" type="submit" value="Confirm">
+          <a href="{% url 'watchlist' %}">Back to Watchlist</a>
+
+          <p class="succ">{{ message }}</p>
+      </form>
+    </div>
+
+{% endblock %}

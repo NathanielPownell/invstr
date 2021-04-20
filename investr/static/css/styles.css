@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(5, 12, 19);
+}
+
+/* Customize scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(70, 70, 70);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(41, 41, 41);
+  }
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.top_navbar {
+    background-color: rgb(5, 12, 19);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top_navbar .hamburger {
+    width: 80px;
+    background-color: #02060e;
+    position: relative;
+    font-size: 28px;
+}
+
+.top_navbar .hamburger .hamburger_inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+}
+
+.top_navbar .hamburger .hamburger_inner > div{
+    width: 30px;
+    height: 3px;
+    background-color: rgb(197, 197, 197);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1px;
+    transition: all .3s ease;
+}
+
+.top_navbar .hamburger .hamburger_inner:hover > div{
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+.top_navbar .hamburger .hamburger_inner > div.two{
+    top: 10px;
+    width: 30px;
+}
+
+.top_navbar .hamburger .hamburger_inner > div.three{
+    top: 20px;
+    width: 30px;
+}
+
+.top_navbar .hamburger .hamburger_inner > div.one.active {
+    background-color: #7bc242;
+    transform: translate(14px);
+}
+.top_navbar .hamburger .hamburger_inner > div.two.active {
+    background-color: #7bc242;
+    transform: translate(10px);
+}
+.top_navbar .hamburger .hamburger_inner > div.three.active {
+    background-color: #7bc242;
+    transform: translate(6px);
+}
+
+.top_navbar .menu {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top_navbar .menu .logo {
+    color: white;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+.top_navbar .menu .logo img{
+    height: 40px;
+    cursor: pointer;
+}
+
+.top_navbar .menu .right_menu ul li {
+    position: relative;
+}
+
+.top_navbar .menu .right_menu ul li .fas{
+    color:#bbc9ba;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd{
+    position: absolute;
+    top: 35px;
+    right: -10px;
+    background-color: #fff;
+    width: 180px;
+    padding: 10px 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    user-select: none;
+    display: none;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item{
+    padding: 10px;
+    cursor: pointer;
+    cursor: #004d40;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item:hover{
+    background-color: #e5f2e0;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd:before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd.active{
+    display: block;
+}
+
+.main_container .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    background-color: #02060e;
+    transition: all 0.3s ease;
+}
+
+.main_container .sidebar .sidebar_inner {
+    position: relative;
+}
+
+.main_container .sidebar .profile {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.main_container .sidebar .profile .img{
+    padding: 0 18px;
+}
+
+.main_container .sidebar .profile .img img{
+    width: 55px;
+    border-radius: 50%;
+}
+
+.main_container .sidebar ul li a{
+    color: #969696;
+    font-size: 18px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border-bottom: solid 1px #303030;
+
+}
+
+
+.main_container .sidebar ul li a .icon{
+    margin-right: 15px;
+    font-size: 28px;
+}
+
+.main_container .sidebar ul li a span{
+    display: inline-block;
+}
+
+.main_container .sidebar ul li a:hover{
+    color: #cacaca;
+}
+
+.main_container .sidebar ul li a.active{
+    color: #f8f8f8;
+    border-left: solid 3px #7bc242;
+}
+
+.main_container .container {
+    margin-top: 60px;
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    padding: 3%;
+}
+
+.account {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    height: 20em;
+}
+.account img{
+    height: 70%;
+}
+
+.watchlist {
+    grid-column: 3;
+    grid-row: 1;
+    overflow: scroll;
+}
+.watchlist table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+.watchlist table th, .watchlist table td {
+    border: solid 1px #d9e2d9;
+}
+
+.chart {
+    width: 100%;
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.tradingview-widget-container {
+    width: 90%;
+}
+
+.main_container .container .item{
+    border: 1px solid #e0f2f1;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.wrapper.active .sidebar{
+    width: 80px;
+}
+
+.wrapper.active .sidebar ul li span.title,
+    .wrapper.active .sidebar .profile_info{
+
+    display: none;
+}
+
+.wrapper.active .main_container .container{
+    width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+.container {
+    color: white;
+}
+
+p.cartext{
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        background-color: red;
+    }
+  }

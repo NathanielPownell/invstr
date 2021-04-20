@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>dash</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".right_menu ul li .fas").click(function(){
+                    $(".profile_dd").toggleClass("active");
+                })
+                $(".hamburger").click(function(){
+                    $(".wrapper").toggleClass("active");
+                    $(".profile_dd").removeClass("active");
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <div class="hamburger_inner">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="logo">
+                        <img src="https://lh3.googleusercontent.com/wUB8N_MDExPZ3M0kWpJHciatbmc_kXLxoOiBGfy4XsC31c4P7QnSv-0e6Ad2cKtRXzCjLTy-uUCJj7Cxj1lt71gnIhd03YKSUEmCeRCf2PRDxjI4g1_1L3jSwTv-V1zU3xa9Rgwn4A=w2400" alt="">
+                    </div>
+                    <div class="right_menu">
+                        <ul>
+                            <li><i class="fas fa-user"></i>
+                                <div class="profile_dd">
+                                    <div class="dd_item">Profile</div>
+                                    <div class="dd_item">Change Password</div>
+                                    <div class="dd_item">Logout</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main_container">
+                <div class="sidebar">
+                    <div class="sidebar_inner">
+                        <div class="profile">
+                            <div class="img">
+                                <img src="pig2.png" alt="profile_pic">
+                            </div>
+                            <div class="profile_info">
+                                <p>Welcome</p>
+                                <p class="profile_name">Alex John</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href='#' class="active">
+                                    <span class="icon"><i class="fas fa-dice-d6"></i></span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#'>
+                                    <span class="icon"><i class="fas fa-exchange-alt"></i></span>
+                                    <span class="title">Trade</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='history.html'>
+                                    <span class="icon"><i class="fas fa-history"></i></span>
+                                    <span class="title">History</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='watchlist.html'>
+                                    <span class="icon"><i class="fas fa-list"></i></span>
+                                    <span class="title">Watchlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#'>
+                                    <span class="icon"><i class="fas fa-newspaper"></i></span>
+                                    <span class="title">News</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </body>
+</html>
